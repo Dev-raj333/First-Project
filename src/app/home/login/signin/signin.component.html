@@ -1,0 +1,40 @@
+<div class="container login">
+    <div class="row">
+        <div class="col-sm-3 register-left">
+          <div class="leftcontent">
+            <h1><span class="logo1">Rent_</span><span class="logo2">Laptop</span></h1>
+            <h3>Welcome</h3>
+            <p>To the best rental service</p>
+            <div class="conatiner mt-3">
+              <p>New one? Click below to register</p>
+              <button type="button" mat-raised-button (click)="go()">Sign Up</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9 register-right">
+          <div class="rightcontent">
+            <div class="content">
+              <form class="example-form"  #daform="ngForm">
+                <h1 class="text-center log">Log In </h1>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Username</mat-label>
+                  <input matInput [(ngModel)]="login.username" name="username" required #name="ngModel"
+                    placeholder="abc@example.com">
+                  <div [hidden]="name.valid || name.pristine" class="alert-danger"></div>
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="password" [(ngModel)]="login.password" name="password" required #name="ngModel"
+                    minlength="4" placeholder="*******">
+                  <div [hidden]="name.valid || name.pristine" class="alert-danger"></div>
+                </mat-form-field>
+                <div class="button">
+                  <button type="submit" mat-raised-button color="primary" [disabled]="!daform.form.valid">Sign In</button>
+                </div> 
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  

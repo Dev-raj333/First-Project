@@ -1,0 +1,27 @@
+<div class="container login">
+    <div class="row">
+        <div class="col-sm-3 register-left">
+          <div class="content">
+            <h1><span class="logo1">Rent_</span><span class="logo2">Laptop</span></h1>
+            <h3>Welcome</h3>
+            <p>To the best rental service</p>
+            <div class="conatiner mt-3">
+              <p>Already Register? Click below to Sign in</p>
+              <button type="button" mat-raised-button (click)="go()">Sign in</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-9 register-right">
+          <div class="rightcontent">
+            <div class="nav justify-content-end p-2">
+              <button type="button" class="me-1" mat-raised-button (click)="customer()">Customer</button>
+              <button type="button" mat-raised-button (click)="owner()">Owner</button>
+            </div>
+            <div class="formcontent">
+              <router-outlet></router-outlet>  
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  
